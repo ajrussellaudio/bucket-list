@@ -17,8 +17,8 @@ model Country {
 }
 
 model City {
-  id Int @id @default(autoincrement())
-  name String
-  country Country @relation(fields: [countryId], references: [id])
+  id        Int     @id @default(autoincrement())
+  name      String
+  country   Country @relation(fields: [countryId], references: [id])
   countryId Int 
 }
